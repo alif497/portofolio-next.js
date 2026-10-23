@@ -15,7 +15,7 @@ export default function Home() {
     <main className="mx-auto mx-w-5x1 px-4 py-10">
       <Hero
       nama="Muhammad Alif Anail Adi"
-      tagline="Siswa kelas x SMKNN 1 Kepanjen,calon Junior web developer di kelas Industri UBIG"
+      tagline="Siswa kelas x SMKN 1 Kepanjen,calon Junior web developer di kelas Industri UBIG"
       />
       <section className=" mt-6 rounded-2xl border border-gray-300 bg-white p-8 shadow-sm">
         <h2 className="mb-4 text-2xl font-bold text-utama">tentang saya</h2>
