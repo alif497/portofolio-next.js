@@ -48,12 +48,19 @@ export default function Home() {
             Cita-Cita
           </h2>
           <ul className="list-inside list-disc space-y-2 text-gray-600"><br></br>
-            <li>
-              Web Developer
-            </li>
-            <li>
-              Cyber Security
-            </li>
+          
+            <ol type="1" className="list-decimal pl-5 font-bold strong">
+              <li>
+              menuntaskan Kelas Industri UBIG sampai semester 4
+              </li>
+                  <li>
+              Bekerja Sebagai Web Developer
+              </li>
+              <li>
+              Magang Di Perusahaan teknologi
+              </li>
+            </ol>               
+         
           </ul>
         </div>
        </section>
