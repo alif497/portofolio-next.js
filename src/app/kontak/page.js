@@ -163,7 +163,7 @@ export default function kontak() {
                                     href="mailto:alifanailrplkanesa@gmail.com"
                                     className="mt-1.5 inline-block w-full break-all text-sm text-aksen hover:underline"
                                 >
-                                    gmail:alifanailrplkanesa@gmail.com
+                                    alifanailrplkanesa@gmail.com
                                 </a>
                             </div>
                         </div>

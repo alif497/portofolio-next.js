@@ -1,7 +1,6 @@
-
 export const proyek = [
     {
-        slug: "halaman-profil",
+        slug: "modul-1",
         judul:"Halaman Profil Pertama",
         kategori: "HTML",
         Minggu:"minggu 01",
@@ -14,9 +13,9 @@ export const proyek = [
         ],
     },
     {
-        slug:"from-kontak",
+        slug:"modul-3",
         judul:"Form Kontak",
-        kategori:"HTML",
+        kategori:"HTML,CSS,JavaScript",
         Minggu:"minggu 03",
         gambar:"/foto/foto-2.png",
         deskripsi:"Modul-3 yang di buat dengan css dan html serta JavaScript dasar",
@@ -27,16 +26,16 @@ export const proyek = [
         ],
     },
     {
-        slug:"tabel-jadwal",
+        slug:"modul-2",
         judul:"Tabel Jadwal Belajar",
+        kategori:"HTML,CSS",
         minggu:"Minggu 02",
         gambar:"/foto/foto-3.png",
         deskripsi:"modul-2 yang di buat menggunakan HTML dan CSS dasar",
         fitur:[
             "Membuat profil lingkaran menggunakan css ",
             "mengatur text kesamping dengan css dan menggunakan code (P) di html untuk membuat paragraf",
-            "membuat icon keahlian kompetensi di bawah text peragraf",
+            "membuat icon keahlian kompetensi di bawah text paragraf",
         ],
     },
 ];
-
