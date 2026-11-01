@@ -15,8 +15,12 @@ export default function ProyekCard({ proyek }) {
             loading="eager"
             className="h-auto w-full"
             />
-            <div className="p-5">
-                <span className="rounded-full bg-latar px-3 py-1 text-xs font-semibold text-utama">{proyek.kategori}</span>
+            <div className="flex flex-wrap gap-1.5">
+                {proyek.kategori.split(",").map((kat,index) =>(
+                    <span key={index} className="rounded-full bg-latar px-3 py-1 text-xs font-semibold text-utama">
+                        {kat.trim()}
+                    </span>
+                ))}
                 <h3 className="mt-3 text-lg font-semibold text-utama">{proyek.judul}</h3>
                 <p className="mt-1 text-sm text-gray-600">{proyek.deskripsi}</p>
             </div>
