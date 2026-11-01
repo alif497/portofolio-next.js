@@ -17,7 +17,7 @@ export default function ProyekCard({ proyek }) {
             />
             <div className="p-5">
                 {proyek.kategori.split(",").map((kat,index)=>(
-                    <span key={index} className="rounded-full font-semibold px-3 py-1 bg-latar text-xs text-utama">
+                    <span key={index} className="rounded-full font-bold px-3 py-1 bg-latar text-xs text-utama">
                         {kat.trim()}
                     </span>
                 ))}
