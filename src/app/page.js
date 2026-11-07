@@ -6,6 +6,7 @@ import SkillCard from "@/components/SkillCard";
 import Link from "next/link";
 import ProyekCard from "@/components/ProyekCard";
 import { proyek } from "@/data/proyek";
+import FilterProyek from "@/components/FilterProyek";
 
 
 
@@ -47,6 +48,13 @@ export default function Home() {
             level={skill.level} />
           ))}
         </div>
+        <div className="mt-9">
+          <Link className=" ml-3 text-2xl border border-black-400 rounded-xl px-6 bg-red-500 hover:border font-semibold text-white"
+          href="/keahlian"
+          >
+            Keahlian
+          </Link>
+        </div>
 
         <section className="mt-10">
           <h2 className="mb-4 text-2xl font-bold text-utam">
@@ -60,6 +68,8 @@ export default function Home() {
           <Link href="/proyek" className="mt-6 inline-block rounded-lg bg-utama px-5 py-2 font-semibold text-white">
           Lihat semua proyek
           </Link>
+
+          <FilterProyek proyek={proyek}/>
         </section>
     </main>
       </>

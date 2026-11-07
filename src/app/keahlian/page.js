@@ -11,7 +11,8 @@ const skills = [
 export default function keahlian(){
     return(
         <main className="mx-auto mt-12">
-            <h2 className="mt-8 mb-4 text-2x1 font-bold text-utama">Keahlihan</h2>
+            <h2 className="mt-8 mb-4 text-2x1 font-bold text-utama dark:text-sky-200 dark:text-
+sky-200">Keahlihan</h2>
                 <div className="grid gap-4 md:grid-cols-3">
                   {skills.map ((skill) =>(
                     <SkillCard key={skill.nama} nama={skill.nama}
@@ -19,7 +20,9 @@ export default function keahlian(){
                   ))}
                 </div>
                 <div className="mt-8">
-                    <Link className="text-lg font-semibold mt-6 text-black border border-gray-300 rounded-3xl bg-gray-300"
+                    <Link className="text-lg font-semibold mt-6 text-black border border-gray-300
+dark:border-gray-600
+dark:border-gray-600 rounded-3xl bg-gray-300"
                     href="/"
                     >
                         ← Kembali ke beranda
