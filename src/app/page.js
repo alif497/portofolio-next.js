@@ -6,7 +6,6 @@ import SkillCard from "@/components/SkillCard";
 import Link from "next/link";
 import ProyekCard from "@/components/ProyekCard";
 import { proyek } from "@/data/proyek";
-import FilterProyek from "@/components/FilterProyek";
 
 
 
@@ -69,7 +68,6 @@ export default function Home() {
           Lihat semua proyek
           </Link>
 
-          <FilterProyek proyek={proyek}/>
         </section>
     </main>
       </>
