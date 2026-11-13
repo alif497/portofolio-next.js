@@ -35,3 +35,15 @@ pesan dari form kontak.
 |'pesan' | 'text' | isi pesan |
 
 RLS aktif tanpa policy, sehingga pengunjung tidak bisa  membaca pesan. Policy 'insert' dibuat di Minggu 15
+
+## Tabel 'Skills'
+
+Daftar keahlian Muhammad Alif Anail Adi.
+
+| kolom | Tipe | Keterangan |
+| --- | --- | --- |
+|'id' | 'int8' | primary key,nomor otomatis 1,2,3,.... |
+|'created_at' | 'timestamptz' | waktu baris dibuat, terisi otomatis dengan 'now()' |
+| 'nama' | 'text' | Nama Keahlian |
+| 'level' | 'text' | Dasar,Menengah,atau Mahir |
+RLS aktif.policy 'pengunjung boleh membaca keahlian':peran 'anon' boleh 'select' semua baris. 
