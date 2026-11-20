@@ -64,7 +64,7 @@ export default function FormKontak() {
             setNama(input.value);
           }} 
         />
-        {error.nama && <p className="mt-1 text-sm text-aksen">{error.nama}</p>}
+        {error.nama && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.nama}</p>}
       </div>
 
      
@@ -75,7 +75,7 @@ export default function FormKontak() {
             setEmail(e.target.value);
           }}
         />
-        {error.email && <p className="mt-1 text-sm text-aksen">{error.email}</p>}
+        {error.email && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.email}</p>}
       </div>
 
      
@@ -94,7 +94,7 @@ export default function FormKontak() {
             setHp(input.value);
           }}
         /> 
-        {error.hp && <p className="mt-1 text-sm text-aksen">{error.hp}</p>}
+        {error.hp && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.hp}</p>}
       </div>
 
       
@@ -108,7 +108,7 @@ export default function FormKontak() {
           <option value="Kerja sama">Kerja sama</option>
           <option value="Lainnya">Lainnya</option>
         </select>
-        {error.keperluan && <p className="mt-1 text-sm text-aksen">{error.keperluan}</p>}
+        {error.keperluan && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.keperluan}</p>}
       </div>
 
       
@@ -128,7 +128,7 @@ export default function FormKontak() {
           }}
     
         />
-        {error.pesan && <p className="mt-1 text-sm text-aksen">{error.pesan}</p>}
+        {error.pesan && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.pesan}</p>}
       </div>
 
       

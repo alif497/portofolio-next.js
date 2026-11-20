@@ -20,10 +20,14 @@ const skills = [
 ];
 
 export default async function Home() {
+  const { data: skills } = await supabase
+  .from("skills")
+  .select("*")
+  .order("id");
   const {data: proyekTerbaru } = await supabase
   .from("projects")
   .select("*")
-  .order("created_at",{ascending:false})
+  .order("created_at", {ascending:false})
   .limit(3);
   return(
     <>

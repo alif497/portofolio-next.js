@@ -3,7 +3,8 @@
 import { useState } from "react";
 
 import ProyekCard from "./ProyekCard"
-import { Button } from "@base-ui/react";
+import { Button } from "./ui/button";
+
 const daftarKategori=["SEMUA", "HTML", "CSS", "JavaScript","Next.js"];
 const tombolBiasa="rounded-full border border-primary dark:border-sky-200 px-4 py-1 text-sm font-semibold text-primary dark:text-sky-200";
 const tombolAktif="rounded-full border border-aksen bg-aksen px-4 py-1 text-sm font-semibold text-white"
@@ -26,9 +27,9 @@ export default function FilterProyek({proyek}) {
         <div className="mt-8">
            <div className="flex flex-wrap gap-2">
             {daftarKategori.map((k) => (
-                <button key={k} variant={kategori === k ? "default": "outline"} onClick={()=> setKategori(k)}>
+                <Button key={k} variant={kategori === k ? "default": "outline"} onClick={()=> setKategori(k)}>
                     {k}
-                </button>
+                </Button>
             ))}
            </div>
 
