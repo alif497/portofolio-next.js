@@ -14,7 +14,7 @@ export default async function DetailProyek({ params }) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10 text-center">
         <h1 className="text-2xl font-bold text-red-500">Proyek Tidak Ditemukan</h1>
-        <p className="mt-2 text-gray-600 dark:text-gray-400 dark:text-
+        <p className="mt-2 text-muted-foreground dark:text-
 gray-400">
           Parameter slug <code className="bg-gray-100 px-1 py-0.5 rounded text-red-600 font-mono">"{slug}"</code> tidak cocok dengan data apa pun.
         </p>
@@ -35,7 +35,7 @@ gray-400">
       </Link>
 
       <h1 className="mt-4 text-3xl font-bold text-gray-900 md:text-4xl">{item.judul}</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-400 dark:text-
+      <p className="mt-2 text-muted-foreground dark:text-
 gray-400">
         {teksKategori} &middot; Dibuat di {item.minggu}
       </p>
@@ -52,12 +52,12 @@ dark:border-gray-700">
         />
       </div>
 
-      <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 dark:text-
+      <p className="mt-6 text-lg text-muted-foreground dark:text-
 gray-300">{item.deskripsi}</p>
 
       <h2 className="mt-8 text-2xl font-bold text-gray-900">Yang Saya Pelajari</h2>
       
-      <ul className="mt-3 list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300 dark:text-
+      <ul className="mt-3 list-disc pl-5 space-y-1 text-muted-foreground dark:text-
 gray-300">
         {item.fitur && item.fitur.map((f) => (
           <li key={f}>{f}</li>

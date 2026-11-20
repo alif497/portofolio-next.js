@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import ProyekCard from "./ProyekCard"
 const daftarKategori=["SEMUA", "HTML", "CSS", "JavaScript","Next.js"];
-const tombolBiasa="rounded-full border border-utama dark:border-sky-200 dark:border-sky-200 px-4 py-1 text-sm font-semibold text-utama dark:text-sky-200 dark:text-sky-200";
+const tombolBiasa="rounded-full border border-primary dark:border-sky-200 px-4 py-1 text-sm font-semibold text-primary dark:text-sky-200";
 const tombolAktif="rounded-full border border-aksen bg-aksen px-4 py-1 text-sm font-semibold text-white"
 
 export default function FilterProyek({proyek}) {
@@ -44,7 +44,7 @@ export default function FilterProyek({proyek}) {
             placeholder="Contoh:HTML"
             className="mt-1 w-full rounded-lg border border-gray-300
 dark:border-gray-600
-dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-2 md:w-80"
+dark:border-gray-600 bg-card dark:bg-gray-800 p-2 md:w-80"
             />
 
                 {kata !== "" && (
@@ -57,7 +57,7 @@ dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-2 md:w-80"
                 )}
            </div>
 
-           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+           <p className="mt-4 text-sm text-muted-foreground">
             menampilkan {hasil.length} dari {proyek.length} proyek</p>
         <div className="mt-6 grid gap-6 md:grid-cols-3">
             {hasil.map((item) => (
@@ -67,7 +67,7 @@ dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-2 md:w-80"
         {hasil.length === 0 && (
             <p className="mt-6 rounded-xl border border-dashed border-gray-300
 dark:border-gray-600
-dark:border-gray-600 p-6 text-center text-gray-600 dark:text-gray-400 dark:text-
+dark:border-gray-600 p-6 text-center text-muted-foreground dark:text-
 gray-400">
                 Belum ada proyek yang cocok
             </p>

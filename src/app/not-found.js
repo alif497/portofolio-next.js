@@ -22,7 +22,7 @@ export default function NotFound() {
         </h1>
         
 
-        <h2 className="mt-2 text-xl font-bold text-utama dark:text-sky-200 dark:text-
+        <h2 className="mt-2 text-xl font-bold text-primary dark:text-
 sky-200-navy md:text-2xl">
           Halaman tidak ditemukan
         </h2>

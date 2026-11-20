@@ -16,7 +16,7 @@ const skills = [
 export default function Home() {
   return(
     <>
-    <main className="mx-auto mx-w-5x1 px-4 py-10 font-bold text-utama dark:text-sky-200 dark:text-
+    <main className="mx-auto mx-w-5x1 px-4 py-10 font-bold text-primary dark:text-
 sky-200">
       <div className="mt-6">
         <Link className="rounded-2xl border-border"
@@ -27,8 +27,8 @@ sky-200">
       </div>
       <section className=" mt-6 rounded-2xl border border-gray-300
 dark:border-gray-600
-dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-8 shadow-sm">
-        <h2 className="mb-4 text-2xl font-bold text-utama dark:text-sky-200 dark:text-
+dark:border-gray-600 bg-card dark:bg-gray-800 p-8 shadow-sm">
+        <h2 className="mb-4 text-2xl font-bold text-primary dark:text-
 sky-200">tentang saya</h2>
         <p className="max-w-xl">
   Hallo, namaku Muhammad Alif Anail Adi. Aku bersekolah di SMKN 1 Kepanjen,
@@ -39,12 +39,12 @@ sky-200">tentang saya</h2>
        <section className="mt-6 grid gap-6 md:grid-cols-2">
         <div className="rounded-xl border border-gray-300
 dark:border-gray-600
-dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-6 shadow-sm">
-          <h2 className="mb-3 text-2xl font-bold text-utama dark:text-sky-200 dark:text-
+dark:border-gray-600 bg-card dark:bg-gray-800 p-6 shadow-sm">
+          <h2 className="mb-3 text-2xl font-bold text-primary dark:text-
 sky-200">
             Hobi
           </h2>
-          <ul className="list-inside list-disc space-y-2 text-gray-600 dark:text-gray-400 dark:text-
+          <ul className="list-inside list-disc space-y-2 text-muted-foreground dark:text-
 gray-400">
             <li>
               Coding
@@ -60,12 +60,12 @@ gray-400">
 
         <div className="rounded-2xl border border-gray-300
 dark:border-gray-600
-dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-6 shadow-sm">
-          <h2 className="mb- text-2xl text-utama dark:text-sky-200 dark:text-
+dark:border-gray-600 bg-card dark:bg-gray-800 p-6 shadow-sm">
+          <h2 className="mb- text-2xl text-primary dark:text-
 sky-200 font-bold">
             Cita-Cita
           </h2>
-          <ul className="list-inside list-disc space-y-2 text-gray-600 dark:text-gray-400 dark:text-
+          <ul className="list-inside list-disc space-y-2 text-muted-foreground dark:text-
 gray-400"><br></br>
           
             <ol type="1" className="list-decimal pl-5 font-bold strong">
@@ -86,8 +86,8 @@ gray-400"><br></br>
 
       <section className="mt-10 rounded-2xl border border-gray-300
 dark:border-gray-600
-dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-6 shadow-sm">
-        <h2 className="mb-4 text-2x1 font-bold text-utama dark:text-sky-200 dark:text-
+dark:border-gray-600 bg-card dark:bg-gray-800 p-6 shadow-sm">
+        <h2 className="mb-4 text-2x1 font-bold text-primary dark:text-
 sky-200">Keahlihan</h2>
         <div className="grid gap-4 md:grid-cols-3">
           {skills.map ((skill) =>(
@@ -99,8 +99,8 @@ sky-200">Keahlihan</h2>
 
       <section className="mt-8 rounded-2xl border border-gray-300
 dark:border-gray-600
-dark:border-gray-600 bg-white dark:bg-gray-800 dark:bg-gray-800 p-6 shadow-sm">
-        <h2 className="mb-5 text-2xl font-bold text-utama dark:text-sky-200 dark:text-
+dark:border-gray-600 bg-card dark:bg-gray-800 p-6 shadow-sm">
+        <h2 className="mb-5 text-2xl font-bold text-primary dark:text-
 sky-200">
           Jadwal Belajar
         </h2>

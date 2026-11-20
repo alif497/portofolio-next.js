@@ -5,7 +5,9 @@ import Hero from "@/components/Hero";
 import SkillCard from "@/components/SkillCard";
 import Link from "next/link";
 import ProyekCard from "@/components/ProyekCard";
+import { buttonVariants } from "@/components/ui/button";
 import { proyek } from "@/data/proyek";
+
 
 
 
@@ -64,7 +66,7 @@ export default function Home() {
               <ProyekCard key={item.slug} proyek={item} />
             ))}
           </div>
-          <Link href="/proyek" className="mt-6 inline-block rounded-lg bg-utama px-5 py-2 font-semibold text-white">
+          <Link href="/proyek" className={buttonVariants({size:"lg",className:"mt-6"})}>
           Lihat semua proyek
           </Link>
 
