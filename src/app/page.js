@@ -6,7 +6,7 @@ import SkillCard from "@/components/SkillCard";
 import Link from "next/link";
 import ProyekCard from "@/components/ProyekCard";
 import { buttonVariants } from "@/components/ui/button";
-import { proyek } from "@/data/proyek";
+import { supabase } from "@/lib/supabase";
 
 
 
@@ -19,7 +19,12 @@ const skills = [
   {nama:"Javascript",level:"Dasar"}
 ];
 
-export default function Home() {
+export default async function Home() {
+  const {data: proyekTerbaru } = await supabase
+  .from("projects")
+  .select("*")
+  .order("created_at",{ascending:false})
+  .limit(3);
   return(
     <>
     <main className="mx-auto mx-w-5x1 px-4 py-10 font-bold text-utama">
@@ -62,7 +67,7 @@ export default function Home() {
             proyek Terbaru
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
-            {proyek && proyek.map((item) =>(
+            {proyekTerbaru && proyekTerbaru.map((item) =>(
               <ProyekCard key={item.slug} proyek={item} />
             ))}
           </div>

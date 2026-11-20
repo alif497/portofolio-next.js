@@ -45,12 +45,9 @@ export default function FilterProyek({proyek}) {
             className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 dark:border-gray-600 bg-card dark:bg-gray-800 p-2 md:w-80"/>
 
                 {kata !== "" && (
-                    <button
-                    type="button"
-                    onClick={() => setKata("")}
-                    className="block mt-2 text-sm font-smibold text-aksen dark-text-red-300 hover:underline">
-                        Hapus Pencarian
-                    </button>
+                 <Button variant="link" onClick={() => setKata("") } className="mt-2 px-0 text-aksen">
+                 Hapus Pencarian
+                 </Button>
                 )}
            </div>
 

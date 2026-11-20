@@ -1,64 +1,60 @@
 import Image from "next/image";
 import Link from "next/link";
-import { proyek } from "@/data/proyek";
-export async function generateStaticParams() {
-  return proyek.map((item) => ({
-    slug: item.slug,
-  }));
+import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { supabase } from "@/lib/supabase";
+
+async function ambilProyek(slug) {
+  const { data } = await supabase
+    .from("projects")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+  return data;
 }
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const item = await ambilProyek(slug);
+
+  if (!item) {
+    return { title: "Proyek tidak ditemukan" };
+  }
+  return { title: item.judul, description: item.deskripsi };
+}
+
 export default async function DetailProyek({ params }) {
   const { slug } = await params;
-  
-  const item = proyek.find((p) => p.slug === slug);
+  const item = await ambilProyek(slug);
+
   if (!item) {
-    return (
-      <main className="mx-auto max-w-3xl px-4 py-10 text-center">
-        <h1 className="text-2xl font-bold text-red-500">Proyek Tidak Ditemukan</h1>
-        <p className="mt-2 text-muted-foreground dark:text-
-gray-400">
-          Parameter slug <code className="bg-gray-100 px-1 py-0.5 rounded text-red-600 font-mono">"{slug}"</code> tidak cocok dengan data apa pun.
-        </p>
-        <Link href="/proyek" className="mt-4 inline-block text-sm font-semibold text-blue-600 hover:underline">
-          &larr; Kembali ke daftar proyek
-        </Link>
-      </main>
-    );
+    notFound();
   }
-  const teksKategori = Array.isArray(item.kategori) 
-    ? item.kategori.join(", ") 
-    : item.kategori;
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
-      <Link href="/proyek" className="text-sm font-semibold text-blue-600 hover:underline">
+      <Link href="/proyek" className="text-sm font-semibold text-aksen hover:underline">
         &larr; Kembali ke daftar proyek
       </Link>
-
-      <h1 className="mt-4 text-3xl font-bold text-gray-900 md:text-4xl">{item.judul}</h1>
-      <p className="mt-2 text-muted-foreground dark:text-
-gray-400">
-        {teksKategori} &middot; Dibuat di {item.minggu}
-      </p>
-
-      <div className="relative mt-6 aspect-[640/420] w-full overflow-hidden rounded-xl border border-gray-200dark:border-gray-
-700
-dark:border-gray-700">
-        <Image
-          src={item.gambar}
-          alt={`Tangkapan layar ${item.judul}`}
-          fill
-          priority
-          className="object-cover"
-        />
+      <h1 className="mt-4 text-3xl font-bold text-primary md:text-4xl">{item.judul}</h1>
+      <div className="mt-3 flex items-center gap-3">
+        <Badge>{item.kategori}</Badge>
+        <span className="text-muted-foreground">Dibuat di {item.minggu}</span>
       </div>
+      <Image
+        src={item.gambar_url}
+        alt={`Tangkapan layar ${item.judul}`}
+        width={640}
+        height={420}
+        loading="eager"
+        className="mt-6 h-auto w-full rounded-xl border border-border"
+      />
+      <p className="mt-6 text-lg">{item.deskripsi}</p>
 
-      <p className="mt-6 text-lg text-muted-foreground dark:text-
-gray-300">{item.deskripsi}</p>
-
-      <h2 className="mt-8 text-2xl font-bold text-gray-900">Yang Saya Pelajari</h2>
-      
-      <ul className="mt-3 list-disc pl-5 space-y-1 text-muted-foreground dark:text-
-gray-300">
+      <Separator className="my-8" />
+      <h2 className="text-2xl font-bold text-primary">Yang Saya Pelajari</h2>
+      <ul className="mt-3 list-disc pl-5">
         {item.fitur && item.fitur.map((f) => (
           <li key={f}>{f}</li>
         ))}
@@ -66,3 +62,4 @@ gray-300">
     </main>
   );
 }
+
