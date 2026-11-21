@@ -15,7 +15,7 @@ export default function ProyekCard({ proyek }) {
             width={640}
             height={420}
             loading="eager"
-            className="h-auto w-full"
+            className="h-48 w-full"
             />
             <CardHeader>
                 <Badge variant={proyek.kategori.toLowerCase()}>{proyek.kategori}</Badge>
